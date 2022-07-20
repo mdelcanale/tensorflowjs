@@ -1,13 +1,11 @@
 const loadMetadata = async () => {
-  const metadata = await fetch(
-    "https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/model.json"
+  const metadata = await fetch("https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/metadata.json"
   );
   return metadata.json();
 };
 
 const loadModel = async () => {
-  const url =
-    'https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/model.json';
+  const url = `https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/model.json`;
   const model = await tf.loadLayersModel(url);
   return model;
 };
